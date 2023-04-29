@@ -6,10 +6,10 @@ $(`.profilePP`).mouseleave(addingClassName('profilePP', 'rounded-circle'));
 $(`.btnContactMe`).click(() => {
     let cls = 'form-control border-danger rounded-5 mx-auto text-black fw-bold d-flex justify-content-around';
     if ($(`.btnContactMe`).hasClass('clicked')) {
-        $('.contaceMeDiv').removeClass(`${cls}`);
+        $(`.contaceMeDiv`).hover(removingClassName('profilePP', `${cls}`));
         $(`.btnContactMe`).removeClass('clicked');
     } else {
-        $('.contaceMeDiv').addClass(`${cls}`);
+        $(`.contaceMeDiv`).hover(addingClassName('profilePP', `${cls}`));
         $(`.btnContactMe`).addClass('clicked');
     }
 })
